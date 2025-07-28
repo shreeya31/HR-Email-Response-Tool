@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HR Candidate Email Tool</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>HR Candidate Response Tool </h1>
+        <form id="candidate-form">
+            <div class="form-group">
+                <label>Candidate Status</label>
+                <div class="radio-group">
+                    <label><input type="radio" name="status" value="selected" required> Selected</label>
+                    <label><input type="radio" name="status" value="rejected" required> Rejected</label>
+                </div>
+            </div>
+
+            <div class="form-group">
+                <label for="candidate-name">Candidate Name</label>
+                <input type="text" id="candidate-name" placeholder="e.g., Jane Doe" required>
+            </div>
+
+            <div class="form-group">
+                <label for="candidate-email">Candidate Email</label>
+                <input type="email" id="candidate-email" placeholder="e.g., jane.doe@example.com" required>
+            </div>
+
+            <div class="form-group">
+                <label for="position">Position Applied For</label>
+                <input type="text" id="position" placeholder="e.g., Software Engineer" required>
+            </div>
+
+            <div id="message-container"></div>
+
+            <div class="button-group">
+                <button type="button" id="preview-btn">Preview Email</button>
+                <button type="submit" id="send-btn">Send Email</button>
+            </div>
+        </form>
+
+        <div id="preview-section" class="hidden">
+            <h2>Email Preview</h2>
+            <pre id="email-preview-content"></pre>
+        </div>
+    </div>
+
+    <script src="js/script.js"></script>
+</body>
+</html>
